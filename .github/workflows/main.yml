@@ -18,6 +18,10 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SECRETSSH }}
 
+    - name: Add SSH key to known_hosts
+      run: |
+        ssh-keyscan -H 52.74.246.33 >> ~/.ssh/known_hosts
+
     - name: Deploy website via SSH
       run: |
         scp -r ./* root@52.74.246.33:/www/wwwroot/madurangagunasekara.run.place
