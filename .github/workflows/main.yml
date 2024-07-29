@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy website via SSH
       run: |
-        scp -r ./* ubuntu@52.74.246.33:/www/wwwroot/madurangagunasekara.run.place
+        scp -r ./* root@52.74.246.33:/www/wwwroot/madurangagunasekara.run.place
